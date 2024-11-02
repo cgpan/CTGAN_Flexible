@@ -1,9 +1,12 @@
 # A flexible CTGAN that can be customized by conditioning on user-specified variables(s)
 
 ## 0.0 Introduction  
-This repo modified the CTGAN official source code and made CTGAN conditional on any user-specified discrete columns for some research purposes.  
+This repo modified the [CTGAN official source code](https://github.com/sdv-dev/CTGAN) and made CTGAN conditional on any user-specified discrete columns for some research purposes.  
 
-## 1.0 Usage
+## 1.0 Usage  
+
+The
+
 
 ## 2.0 SDV/CTGAN Official Resources
 
