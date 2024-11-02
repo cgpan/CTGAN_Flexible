@@ -13,7 +13,7 @@ pip uninstall ctgan
 ```
 
 Download this repo to your project file path, then you can use it as the orginal `ctgan.` One example is:   
-```{Python}
+```Python
 # import the modules
 from ctgan import CTGAN
 from ctgan import load_demo
