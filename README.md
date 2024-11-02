@@ -8,7 +8,7 @@ This repo modified the [CTGAN official source code](https://github.com/sdv-dev/C
 The usage is similar to the original version of CTGAN; I added an extra parameter `user_specified_col=` in class objects like  `CTGAN` and `DataSampler.`   
 
 To avoid future package conflicts, please uninstall the `ctgan` library from your environment if you already installed it.  
-```{python}
+```python
 pip uninstall ctgan
 ```
 
