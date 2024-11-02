@@ -2,7 +2,11 @@
 
 ## 0.0 Introduction  
 ### 0.1 Purpose  
-This repo modified the [CTGAN official source code](https://github.com/sdv-dev/CTGAN) and made CTGAN conditional on any user-specified discrete columns for some research purposes.  
+This repo modified the [CTGAN official source code](https://github.com/sdv-dev/CTGAN) and made CTGAN conditional on any user-specified discrete columns for some research purposes.    
+
+**To Do:**   
+- How to ensure that the synthetic data have successfully been created by conditioning on user-specified discrete variables?
+- The loss funciton will force every column in the faka data to be as similar as the real data. Will this impact the research purpose (i.e., conditioning on specific column(s) )?
 
 ### 0.2 How I modified the original CTGAN  
 **TO BE UPDATED**  
