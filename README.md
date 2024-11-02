@@ -6,7 +6,8 @@ This repo modified the [CTGAN official source code](https://github.com/sdv-dev/C
 
 **To Do:**   
 - How to ensure that the synthetic data have successfully been created by conditioning on user-specified discrete variables?
-- The loss funciton will force every column in the faka data to be as similar as the real data. Will this impact the research purpose (i.e., conditioning on specific column(s) )?
+- The loss function will force every column in the fake data to be as similar as the real data. Will this impact the research purpose (i.e., conditioning on specific column(s) )?
+- How to control whether the synthetic data should adhere to the same min/max boundaries set by the real data? 
 
 ### 0.2 How did I modify the original CTGAN  
 **TO BE UPDATED**  
