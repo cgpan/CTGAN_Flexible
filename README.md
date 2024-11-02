@@ -76,7 +76,10 @@ plt.show()
 synthetic_data = ctgan.sample(32561)
 ```
 
-By default, the parameter `user_specified_col=None`. If you do not specify any columns, this function will run the same to the original `ctgan.`
+By default, the parameter `user_specified_col=None`. If you do not specify any columns, this function will run the same to the original `ctgan.`  
+
+You can run `01_tracing_source_code.ipynb` under the folder `Tests_PAN` to see the performance.  
+
 
 
 ## 2.0 SDV/CTGAN Official Resources
