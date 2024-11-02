@@ -13,7 +13,7 @@ This repo modified the [CTGAN official source code](https://github.com/sdv-dev/C
 **TO BE UPDATED**  
 
 ### 0.3 Update memo  
-**TO BE UPDATED**
+- 2024.11.01: Modified the source in data_sampler.py, data_transformer.py, and ctgan.py to make the overall codes can accept user-specified discrete column(s); ensure the modified module can run well.
 
 ## 1.0 Usage  
 
