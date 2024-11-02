@@ -5,7 +5,67 @@ This repo modified the [CTGAN official source code](https://github.com/sdv-dev/C
 
 ## 1.0 Usage  
 
-The
+The usage is similar to the original version of CTGAN; I added an extra parameter `user_specified_col=` in class objects like  `CTGAN` and `DataSampler.`   
+
+To avoid future package conflicts, please uninstall the `ctgan` library from your environment if you already installed it.  
+```{python}
+pip uninstall ctgan
+```
+
+Download this repo to your project file path, then you can use it as the orginal `ctgan.` One example is:   
+```{python}
+# import the modules
+from ctgan import CTGAN
+from ctgan import load_demo
+from ctgan.data_sampler import DataSampler
+from ctgan.data_transformer import DataTransformer
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# load the data
+real_data = load_demo()
+
+# specifiy all discrete columns
+discrete_columns = [
+    'workclass',
+    'education',
+    'marital-status',
+    'occupation',
+    'relationship',
+    'race',
+    'sex',
+    'native-country',
+    'income'
+]
+
+# specificy the specific discrete column(s) you want to condition on
+# this must be a list containing the strings of column names
+controlled_col = ["sex", "race"]
+
+# instantiate a CTGAN object
+ctgan = CTGAN(epochs=50, cuda=True, verbose=True)
+
+# fit ctgan model
+ctgan.fit(real_data, discrete_columns, user_specified_col=controlled_col)
+
+# plot the training loss
+loss_df = ctgan.loss_values  # Retrieve the loss DataFrame
+
+plt.figure(figsize=(10, 6))
+plt.plot(loss_df['Epoch'], loss_df['Generator Loss'], label='Generator Loss', color='blue')
+plt.plot(loss_df['Epoch'], loss_df['Discriminator Loss'], label='Discriminator Loss', color='orange')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.title('CTGAN Training Loss Over Epochs')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# generate synthetic data
+synthetic_data = ctgan.sample(32561)
+```
+
+By default, the parameter `user_specified_col=None`. If you do not specify any columns, this function will run the same to the original `ctgan.`
 
 
 ## 2.0 SDV/CTGAN Official Resources
