@@ -10,7 +10,7 @@ This repo modified the [CTGAN official source code](https://github.com/sdv-dev/C
 - How to control whether the synthetic data should adhere to the same min/max boundaries set by the real data? 
 
 ### 0.2 How did I modify the original CTGAN  
-**TO BE UPDATED**  
+**TO BE UPDATED:** see section 1 in `01_tracing_source_code.ipynb` under the folder `Tests_PAN` for details.  
 
 ### 0.3 Update memo  
 - 2024.11.01: Modified the source in data_sampler.py, data_transformer.py, and ctgan.py to make the overall codes can accept user-specified discrete column(s); ensure the modified module can run well.
